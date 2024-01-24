@@ -15,18 +15,20 @@ export default function Home() {
     parentid: null
   });
 const handlemainData=(data:MyData)=>{
-   let data1=Array.from(maindata);
+   let data1=[...maindata];
    data1.push(data)
    setMaindata(data1)
 }
   useEffect(() => {
     let getfilterdata = maindata.find((i) => i.parentid === null);
-    console.log(getfilterdata)
     setparentdata(getfilterdata?getfilterdata:parentdata);
   }, [maindata]);
   return (
     <div>
+    
+  <h1 className="text-center font-bold">This is vs Code Folder Structure Click on it and Add folder and files</h1>
       <Folder folderdata={parentdata} maindata={maindata} handlemainData={handlemainData}/>
+  
     </div>
   );
 }
