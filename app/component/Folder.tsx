@@ -95,7 +95,7 @@ useEffect(()=>{
             value={foldername}
             onChange={(e) => handlefolderName(e)}
             onKeyDown={(e) => handleFolder(e, folderdata.id)}
-            className="border border-black mt-1"
+            className="border border-black mt-1 p-1"
           />
         )}
         {isFileopen && (
@@ -104,6 +104,7 @@ useEffect(()=>{
             value={filename}
             onChange={(e) => handleFileName(e)}
             onKeyDown={(e) => handleAddfile(e, folderdata.id)}
+            className="border border-black mt-1 p-1"
           ></input>
         )}
       </div>
